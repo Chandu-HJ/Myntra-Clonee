@@ -14,6 +14,7 @@
     width: 45px;
     height: auto;
     margin: 10px auto;
+    object-fit: contain;
   }
 
   nav {
@@ -60,6 +61,7 @@
   .adds-section img {
     margin: 0;
     width: 100%;
+    object-fit: contain;
   }
 
   /* Banner carousel */
@@ -95,12 +97,14 @@
   .medal-carousel img,
   .global-carousel img {
     width: 45% !important;
+    object-fit: contain;
     /* padding: 5px; */
   }
 
   /* Flex category images */
   .flex-container img {
     width: calc(100%/6);
+    object-fit: contain;
     
   }
 
@@ -124,11 +128,13 @@
 
   .app-stores img {
     height: 35px;
+    object-fit: contain;
   }
 
   .keep-touch img {
     height: 25px;
     width: 25px;
+    object-fit: contain;
   }
 
   .original .og1,
