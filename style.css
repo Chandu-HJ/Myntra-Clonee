@@ -52,7 +52,7 @@ nav {
 
 
 
-.nav-items{
+/* .nav-items{
    
    
     marker: none;
@@ -68,16 +68,60 @@ nav {
     text-transform: uppercase;
     cursor: pointer;
     
+} */
+
+.nav-items {
+  list-style-type: none;
+  padding: 0 17px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: .3px;
+  color: #282c3f;
+  border-bottom: 3px solid transparent; /* ✅ add this */
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .nav-items:hover {
-    border-bottom: 2px solid #FF3F6C;
+    border-bottom: 3px solid #FF3F6C;
     transition: width 0.2s ease;
 }
 
-.nav-items sup{
-    color: #FF3F6C;
+.nav-items:nth-child(1):hover{
+  border-bottom: 3px solid #cb2525;
+    transition: width 0.2s ease;
 }
+
+.nav-items:nth-child(3):hover{
+  border-bottom: 3px solid #da6e0f;
+    transition: width 0.2s ease;
+}
+
+.nav-items:nth-child(4):hover{
+  border-bottom: 3px solid #e3ae0f;
+    transition: width 0.2s ease;
+}
+
+.nav-items:nth-child(5):hover{
+  border-bottom: 3px solid #0fbfda;
+    transition: width 0.2s ease;
+}
+.nav-items:nth-child(6):hover{
+  border-bottom: 3px solid #0fbfda;
+    transition: width 0.2s ease;
+}
+/* superscript like block */
+.power {
+  font-size: 10px;
+  color: #ff3f6c;
+  font-weight: bold;
+  position: relative;
+  top: -6px;       /* raises text like sup */
+  margin-left: 2px;
+}
+
 
 .search-bar {
   margin-left: 40px;
