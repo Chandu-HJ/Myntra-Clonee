@@ -1,0 +1,175 @@
+@media only screen and (max-width: 520px) {
+  /* Header */
+  body{
+    width: 100%;
+  }
+  .head-section {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .logo img {
+    width: 45px;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .nav-items {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .search-bar {
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .elements {
+    margin-top: 10px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .element p {
+    font-size: 10px;
+  }
+
+  /* Adds section */
+  .adds-section {
+    margin-top: 50px;
+  }
+
+  .adds-section img {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Banner carousel */
+  .banner-carousel {
+    height: 200px;
+  }
+
+  /* Text containers */
+  .text-container {
+    font-size: 1.2em;
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin: 30px 0 10px;
+  }
+
+  /* All carousels */
+  .rs-carousel,
+  .luke-carousel,
+  .medal-carousel,
+  .global-carousel {
+    height: 220px;
+    margin-top: 20px;
+  }
+
+  .luke-carousel,
+  .medal-carousel,
+  .global-carousel {
+    height: 200px;
+  }
+
+  .rs-carousel img,
+  .luke-carousel img,
+  .medal-carousel img,
+  .global-carousel img {
+    width: 45% !important;
+    /* padding: 5px; */
+  }
+
+  /* Flex category images */
+  .flex-container img {
+    width: calc(100%/6);
+    
+  }
+
+  /* Footer */
+  .footer {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  .footer-section1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .online-shopping,
+  .customer-polices,
+  .exp-myntra,
+  .original {
+    width: 100%;
+  }
+
+  .app-stores img {
+    height: 35px;
+  }
+
+  .keep-touch img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .original .og1,
+  .original .og2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .original .text {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .popular-searches-content p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .footer-section3 .content {
+    flex-direction: column;
+  }
+
+  .footer-section3 .address-1,
+  .footer-section3 .address-2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Side banner & bell */
+  .side-banner {
+    display: none;
+  }
+
+  .bell {
+    bottom: 15px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .bell i {
+    font-size: 22px;
+  }
+}

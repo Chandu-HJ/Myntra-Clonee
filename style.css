@@ -1,0 +1,830 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+  position: relative;
+    width: 100%;
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+               position: relative;
+      
+
+}
+
+
+
+.head-section{
+  width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    
+}
+
+
+.logo img{
+    width: 55px;
+    height: 85px;
+    margin-left: 50px;
+    margin-top: 10px;
+    object-fit: contain
+}
+
+nav {
+    align-self: flex-end;
+}
+.nav-list{
+    display: flex;
+    marker: none;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+
+
+.nav-items{
+   
+   
+    marker: none;
+    list-style-type: none;
+    padding: 0 17px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    border-bottom: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.nav-items:hover {
+    border-bottom: 2px solid #FF3F6C;
+    transition: width 0.2s ease;
+}
+
+.nav-items sup{
+    color: #FF3F6C;
+}
+
+.search-bar {
+  margin-left: 40px;
+  background-color: #f5f5f6;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding: 7px 10px;
+}
+
+.search-icon {
+  background-color: transparent;
+  padding: 0 8px;
+}
+
+.search-bar input {
+  width: 300px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #282c3f;
+  font-size: 14px;
+}
+
+/* On focus */
+.search-bar input:focus {
+  border: none;
+  outline: none;
+  background-color: transparent;  
+  box-shadow: none;               
+}
+
+.search-bar:focus-within {
+  background-color: #fff;          
+  border: 1px solid #f5f5f6;  
+  border-radius: 5px;
+}
+
+.elements{
+    margin-left: 0px;
+    justify-self: right;
+    display: flex;
+}
+
+.element{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-weight: 600;
+    /* align-self: flex-end; */
+    margin: 5px;
+    
+    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 3px;
+    position: relative;
+    cursor: pointer;
+    padding-left: 10px;
+    margin-left: 10px;
+    
+}
+
+.element p{
+    font-size: 12px;
+    
+}
+
+
+.element::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;  /* move underline below header */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FF3F6C;
+  /* transition: width 0.2s ease; */
+}
+
+.element:hover::after {
+  width: 100%;
+}
+
+/* A adds image or discount image */
+.adds-section {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adds-section img{
+  margin: 0 60px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* banner-carousel */
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner-carousel .slides {
+  display: flex;
+  width: 500%; /* 5 images → total width = 5×100% */
+  height: 100%;
+  animation: slideAnimation 20s infinite;
+}
+
+.banner-carousel .slide {
+  width: 20%; /* each slide takes 20% of total (100/5) */
+  flex-shrink: 0;
+}
+
+.banner-carousel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #fff;
+  
+}
+
+/* Dots below */
+.banner-carousel .dots {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.banner-carousel .dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+/* Active dot timing */
+.banner-carousel .dots span:nth-child(1) { animation: dotActive 20s infinite; }
+.banner-carousel .dots span:nth-child(2) { animation: dotActive 20s infinite 4s; }
+.banner-carousel .dots span:nth-child(3) { animation: dotActive 20s infinite 8s; }
+.banner-carousel .dots span:nth-child(4) { animation: dotActive 20s infinite 12s; }
+.banner-carousel .dots span:nth-child(5) { animation: dotActive 20s infinite 16s; }
+
+/* Sliding Animation */
+@keyframes slideAnimation {
+  0%   { transform: translateX(0%); }
+  16%  { transform: translateX(0%); }
+  20%  { transform: translateX(-20%); }
+  36%  { transform: translateX(-20%); }
+  40%  { transform: translateX(-40%); }
+  56%  { transform: translateX(-40%); }
+  60%  { transform: translateX(-60%); }
+  76%  { transform: translateX(-60%); }
+  80%  { transform: translateX(-80%); }
+  96%  { transform: translateX(-80%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Active dot animation */
+@keyframes dotActive {
+  0%, 16% { background: grey; }
+  20%, 100% { background: #ccc; }
+}
+
+
+
+/* text Container design */
+
+.text-container {
+  text-transform:uppercase;
+  color: #3e4152;
+  font-size: 1.8em;
+  letter-spacing: .15em;
+  margin-top: 50px;
+  margin: 50px 0 10px 30px;
+  max-height: 5em;
+  font-weight: 700;
+}
+
+/* Image slider for rising star */
+.rs-carousel,
+.luke-carousel,
+.medal-carousel,
+.global-carousel
+{
+  margin-top: 60px;
+  padding-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  padding: 20px 0 15px;
+}
+
+.luke-carousel, .medal-carousel, .global-carousel{
+  height: 300px;
+}
+
+.rs-carousel .slides,
+.luke-carousel .slides
+{
+  display: flex;
+  width: 300%;
+  /* Animation */
+  animation: slideAnimation-rs 20s ease-in-out infinite;
+}
+
+/* medal-corousal .slides need change because it having 4 slides */
+.medal-carousel .slides{
+  display: flex;
+  width: 400%;
+   animation: slideAnimation-mc 20s  infinite;
+}
+
+/* global-carousel only having 2 slides */
+.global-carousel .slides{
+  display: flex;
+  width: 200%;
+  animation: slideAnimation-gc 10s  infinite;
+  
+}
+
+
+
+.rs-carousel .slides .slide {
+  width: 33.33333%;
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Luke carousel extra featuring */
+.luke-carousel .slides .slide {
+  width: 33.33333%;
+  display: flex;
+  
+  flex-shrink: 0;
+}
+
+/* medal-carousel slide */
+.medal-carousel .slides .slide {
+  width: 25%;
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* global-carousel only 2 slide */
+.global-carousel .slides .slide {
+  width: 50%;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.rs-carousel .slides .slide img{
+  width: 20%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+
+/* luke-xarsoule img adding functionality */
+
+.luke-carousel img{
+  padding: 5px;
+  width: calc((100% - 60px) / 6);
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* medal - carousel image not having padding and 6 images in one slide
+global-carousel images also same */
+.medal-carousel img,
+.global-carousel img
+{
+  width: 16.66666%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+
+
+
+@keyframes slideAnimation-rs {
+  0%    { transform: translateX(0%); }        /* slide 1 */
+  30%   { transform: translateX(0%); }        /* hold slide 1 */
+  33.333% { transform: translateX(-33.3333%); } 
+  63.333% { transform: translateX(-33.3333%); }/* hold slide 2 */
+  66.666% { transform: translateX(-66.6666%); } 
+  96.666% { transform: translateX(-66.6666%); }/* hold slide 3 */
+  100%  { transform: translateX(0%); }        /* back to start smoothly */
+}
+
+@keyframes slideAnimation-mc {
+  0%,20% {transform: translateX(0%);}
+  25%,45% {transform: translateX(-25%);}
+  50%,70% {transform: translateX(-50%);}
+  75%,95% {transform: translateX(-75%);}
+  100% {transform: translateX(0%);} 
+}
+
+@keyframes slideAnimation-gc {
+  0%, 30% {transform: translateX(0%);}
+  50%, 80% {transform: translateX(-50%);}
+  100% {transform: translate(0%);}
+}
+
+
+.rs-carousel .dots,
+.luke-carousel .dots,
+.medal-carousel .dots,
+.global-carousel .dots
+{
+  
+  position: absolute;
+  bottom: 4px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+  gap: 18px;
+}
+
+
+
+.rs-carousel .dots span,
+.luke-carousel .dots span,
+.medal-carousel .dots span,
+.global-carousel .dots span
+{
+  height: 8px;
+  width: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  /* transition: background 0.002s ease-in; */
+  animation: dotActive 20s infinite;
+}
+
+.medal-carousel .dots span{
+  animation: medalDots 20s infinite;
+  
+}
+
+
+.rs-carousel .dots span:nth-child(1)
+.luke-carousel .dots span:nth-child(1)
+{
+  background-color: grey;
+}
+
+.rs-carousel .dots span:nth-child(1),
+.luke-carousel .dots span:nth-child(1)
+{ animation-delay: 0s; }
+
+.rs-carousel .dots span:nth-child(2),
+.luke-carousel .dots span:nth-child(2)
+{ animation-delay: 6.666s; } /* ~20s/3 */
+
+
+.rs-carousel .dots span:nth-child(3),
+.luke-carousel .dots span:nth-child(3)
+{ animation-delay: 13.333s; }
+
+
+/* delays for medal-carousel spans */
+.medal-carousel .dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.medal-carousel .dots span:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.medal-carousel .dots span:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.medal-carousel .dots span:nth-child(4) {
+  animation-delay: 15s;
+}
+
+/* for global carousel dots */
+.global-carousel .dots span{
+  animation-name: globalDots;           /* animation name */
+  animation-duration: 10s;              /* total cycle (match slide duration) */
+  animation-timing-function: steps(1,end); /* instant step change */
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.global-carousel .dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.global-carousel .dots span:nth-child(2) {
+  animation-delay: 5s;
+  
+}
+
+@keyframes dotActive {
+  0%, 16% { background: grey; }
+  20%, 100% { background: #ccc; }
+}
+
+@keyframes medalDots {
+  50%, 100%{background-color: #ccc;}  
+  0%{background-color: grey;}
+}
+
+@keyframes globalDots {
+ 0%, 49.999%  { background-color: grey; }
+
+  /* 50% -> 99.999% : active color for dot2 */
+  50%, 99.999% { background-color: #ccc; }
+
+  /* ensure cycle loops back cleanly */
+  100% { background-color: grey; }
+}
+
+/* below flex container */
+
+.flex-container{
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container img{
+  display: block;
+  width: calc((100%)/6);
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+
+}
+
+
+/* footer section */
+.footer{
+  margin-top: 60px;
+  margin-left: 7%;
+  margin-right: 7%;
+  background-color: #fafbfc;
+  
+
+}
+.footer-section1{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer-section1 p,
+.footer-section3 p{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #282c37;
+  font-weight: 700;
+  font-size: 11px;
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
+
+.footer-section1 a
+{
+  
+    color: #696b79;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    cursor: pointer;
+    line-height: normal;
+}
+
+.online-shopping{
+  width: 15%;
+}
+
+.customer-polices{
+  width: 15%;
+}
+
+.exp-myntra{
+  width: 30%;
+}
+
+.app-stores img{
+  margin-right: 10px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.keep-touch img{
+  height: 20px;
+  width: 22px;
+  padding: 3px;
+}
+
+
+.original .og1, .og2{
+  display: flex;
+
+}
+
+.og1 img, .og2 img{
+  padding-top: 18px;
+  display: block;
+  height: 40px;
+  width: 48px;
+  padding-right: 15px;
+}
+
+.og1 .text,
+.og2 .text{
+  padding-top: 0;
+  margin-top: 0;
+  width: 52%;
+}
+
+.original p{
+  color: #696b79;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.original p strong{
+  color: #282c3f;
+}
+
+
+/* footer section 2  */
+
+.footer-section2 {
+  margin-top: 30px;
+  
+}
+
+/* .popular-searches-h {
+  position: absolute;
+  margin-top: -15px;
+  background: #fafbfc;
+  padding-right: 10px;
+  color: #282c3f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.popular-searches-h hr{
+  color: #696b79;
+} */
+
+.popular-searches-h {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* small gap between text and line */
+  background: #fafbfc;
+  color: #282c3f;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.popular-searches-h p {
+  margin: 0; /* remove default p spacing */
+  white-space: nowrap;
+}
+
+.popular-searches-h hr {
+  flex-grow: 1; /* line takes remaining space */
+  border: none;
+  border-top: 1px solid #e9eaf0;
+  color: #eaeaf0;
+  height: 0;
+}
+
+
+.popular-searches-content p{
+  color: #696b79;
+  font-size: 14px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: justify;
+}
+
+/* footer section 3 */
+
+.footer-section3 {
+
+}
+
+.footer-section3 hr{
+  flex-grow: 1; /* line takes remaining space */
+  border: none;
+  border-top: 1px solid #e9eaf0;
+  color: #eaeaf0;
+  height: 0;
+}
+
+.footer-section3 p{
+  text-transform: capitalize;
+  columns: #282c3f;
+  font-size: 15px;
+}
+
+.footer-section3 .content {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.footer-section3 .content .address-1 {
+  width: 70%;
+  padding-right: 30px;
+}
+
+.footer-section3 .content .address-2{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.footer-section3 pre{
+  color: #696b79;
+  font-family: inherit;
+}
+
+.side-banner {
+  position: fixed;
+  bottom: 130px;
+  right: 0;
+  width: 36px;
+  height: 288px;
+  background-color: #535766;
+  z-index: 1000;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  /* justify-content: flx-start; */
+  writing-mode: vertical-rl; /* makes text vertical */
+  /* text-orientation: mixed; */
+  font-weight: 700;
+  font-size: 10px;
+  transform: rotate(180deg);
+  font-size: 24px;
+  padding: 4px;
+  
+}
+
+.side-banner div{
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-family: inherit;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.side-banner:hover {
+  background-color: #ff3f6c; /* Myntra pink */
+}
+
+.side-banner i{
+  color: #fff;
+  align-self: center;
+  padding-top: 30px;
+  padding-left: 0px;
+}
+
+.bell {
+  position: fixed;
+  bottom: 82px;
+  right: 22px;
+  width: 45px;
+  height: 45px;
+  background-color: rgb(58, 111, 210);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bell i {
+  font-size: 18px; /* adjust icon size */
+  color: white;
+  animation: bellAnimation 3s infinite ease-in-out;
+}
+
+
+@keyframes bellAnimation {
+  0%,10%, 100% {transform: rotate(0deg);}
+  40%,50% {transform: rotate(-45deg);}
+  70% {transform: rotate(-30deg);}
+  60% {transform: rotate(30deg);}
+  80% {transform: rotate(20deg);}
+  90% {transform: rotate(-20deg);}
+  
+}
+
+.giggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgb(58, 111, 210);
+  border-radius: 50%;
+  transform: translate(-25%, -25%);
+  opacity: 0;
+}
+
+.giggle {
+  animation: myGiggle 2s linear infinite;
+}
+
+.giggle:nth-child(2) {  /* second giggle ring */
+  animation-delay: 1s;
+}
+
+
+@keyframes myGiggle {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+
