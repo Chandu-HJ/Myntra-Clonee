@@ -770,6 +770,14 @@ global-carousel images also same */
   font-family: inherit;
 }
 
+.footer-section3 span{
+  color: #526cd0;
+  font-weight: 700;
+  cursor: pointer;
+}
+span{
+  cursor: pointer;
+}
 .side-banner {
   position: fixed;
   bottom: 130px;
