@@ -19,8 +19,8 @@ https://chandu-hj.github.io/Myntra-Clonee/
 ## 🚀 Technologies Used
 - HTML5  
 - CSS3  
-- Google Fonts (optional)  
-- Icons (optional)
+- Google Fonts
+- Icons 
 
 ---
 
